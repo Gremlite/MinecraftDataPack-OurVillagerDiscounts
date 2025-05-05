@@ -1,0 +1,26 @@
+name: Release
+on:
+  push:
+    tags:
+      - "v*.*.*-build.*"
+permissions:
+  contents: write
+jobs:
+  release:
+    environment: Mod
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set output
+        id: vars
+        run: echo "tag=${GITHUB_REF#refs/*/}" >> $GITHUB_OUTPUT
+      - name: ZIP contents
+        run: |
+          cd ourvillagerdiscounts
+          zip -r ../ourvillagerdiscounts-${{ steps.vars.outputs.tag }}.zip .
+      - name: GitHub release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: "ourvillagerdiscounts-${{ steps.vars.outputs.tag }}.zip"
+          name: "${{ steps.vars.outputs.tag }}"
+          fail_on_unmatched_files: true

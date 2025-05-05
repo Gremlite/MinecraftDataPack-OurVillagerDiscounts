@@ -1,0 +1,4 @@
+execute store result storage ourvillagerdiscounts:gossip_index Index int 1 run scoreboard players get #ourvillagerdiscounts_index minescript_for_scores
+function ourvillagerdiscounts:compare_gossips with storage ourvillagerdiscounts:gossip_index
+scoreboard players add #ourvillagerdiscounts_index minescript_for_scores 1
+execute if score #ourvillagerdiscounts_index minescript_for_scores < #gossip_count ourvillagerdiscounts_gossip run function ourvillagerdiscounts:build_gossip/for_score

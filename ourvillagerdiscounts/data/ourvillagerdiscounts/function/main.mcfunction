@@ -1,0 +1,4 @@
+scoreboard objectives add ourvillagerdiscounts_gossip dummy
+scoreboard objectives add minescript_for_scores dummy
+scoreboard objectives add minescript_strings_equal dummy
+data modify storage ourvillagerdiscounts:scratch_gossip Type set value "major_positive"

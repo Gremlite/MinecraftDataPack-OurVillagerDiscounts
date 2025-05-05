@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "description": "A data pack for sharing trade prices related to zombie curing. All other gossip is not shared.",
+    "pack_format": 71
+  }
+}

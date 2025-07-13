@@ -6,7 +6,7 @@ maintain.
 
 You can either grab the file directly from releases, or from one of the following:
 
-1. [Modrinth](https://modrinth.com/datapack/our-villager-discounts-data-pack)
+1. [Modrinth](https://modrinth.com/datapack/our-villager-discounts-datapack)
 2. [CurseForge](https://www.curseforge.com/minecraft/data-packs/our-villager-discounts-data-pack)
 
 It shares zombie curing gossips across the server. You do need to right click a
